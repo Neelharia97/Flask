@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+Register Now!
+{% endblock %}
+
+{%block content%}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class = "form-register" style = "color:white">
+            {{ forms.hidden_tag() }}
+            <img class="mb-4" src="Notes/logo.JPG" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+
+            {{ forms.username.label() }}
+            {{ forms.username(class = "form-control", placeholder = "JohnDoe20") }}
+
+            {{ forms.email_address.label() }}
+            {{ forms.email_address(class = "form-control", placeholder = "johndoe@gmail.com") }}
+
+            {{ forms.password1.label() }}
+            {{ forms.password1(class = "form-control", placeholder = "Enter Your Password") }}
+
+            {{ forms.password2.label() }}
+            {{ forms.password2(class = "form-control", placeholder = "Confirm Your Password ") }}
+
+            <br>
+            {{ forms.submit(class = "btn btn-lg btn-block btn-primary" ) }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
