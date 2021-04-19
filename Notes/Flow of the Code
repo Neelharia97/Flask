@@ -1,0 +1,13 @@
+The Application is restructured from a single file to files for every method.
+
+1. The __init__ file
+The __init__ file is always executed first, according to python compiler.
+This file imports all the packages and dependencies that are required by other
+files.
+
+2. The routes.py file
+This file contains all the route for specific function.
+
+3. The models.py file
+This file is connection to database which is then displayed on the frontend.
+
